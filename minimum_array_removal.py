@@ -16,6 +16,7 @@ def reductionCost(startInd, endInd, num):
     
     for k in range(startInd, endInd):
         #Here, k is the index of the value that will be left over
+        #we are computing the cost each time if you had "k" as the last element
 
         #left hand side problem
         left_cost = reductionCost(startInd, k, num)
