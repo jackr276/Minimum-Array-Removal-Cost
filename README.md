@@ -1,4 +1,4 @@
-# Maximum Array Removal Cost
+# Minimum Array Removal Cost
 Author: [Jack Robbins](https://github.com/jackr276)
 
 This is a simple program that finds the minimum cost in reducing an array's size to one element.
