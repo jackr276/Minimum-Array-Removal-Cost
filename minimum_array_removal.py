@@ -3,7 +3,9 @@ Jack Robbins
 Minimum Array Removal
 """
 
-
+"""
+Split the array in half at every index, adding the respective costs up
+"""
 def reductionCost(startInd, endInd, num):
     #base condition
     if startInd >= endInd:
@@ -13,6 +15,7 @@ def reductionCost(startInd, endInd, num):
     cost = 10000000000000
     
     for k in range(startInd, endInd):
+        #Here, k is the index of the value that will be left over
 
         #left hand side problem
         left_cost = reductionCost(startInd, k, num)
@@ -23,6 +26,7 @@ def reductionCost(startInd, endInd, num):
         cost = min(cost, right_cost + left_cost + computeCost(num, startInd, endInd))
     
     return cost
+
 
 def computeCost(num, i, j):
     cost = 0
